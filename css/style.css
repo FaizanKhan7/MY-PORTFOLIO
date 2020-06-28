@@ -25,6 +25,11 @@ a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .bg-top {
     background: url(../images/bg-top.jpg) no-repeat center;
     background-size: cover;
@@ -103,9 +108,9 @@ h2 {
 }
 
 .skills ul {
-    width: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .skills ul li {
@@ -282,7 +287,116 @@ h2 {
     .education,
     .projects,
     .contact {
-        max-width: 500px;
+        max-width: 1200px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        display: none;
+    }
+}
+
+.header-bg {
+    background: linear-gradient( 180deg, rgba(249, 249, 246, 0.767) 0%, rgba(255, 255, 255) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0 0;
+}
+
+.header-bg img {
+    height: 300px;
+    width: 250px;
+}
+
+.head-content p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.head-content h1 {
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #5c5c5c;
+}
+
+.head-content h2 {
+    text-transform: uppercase;
+    color: #656565;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .header-bg {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .engineering {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: row-reverse;
+    }
+    .bachelor-degree {
+        margin-top: 20px;
+        width: 70%;
+    }
+    .twelth {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .pre-education {
+        margin-top: 20px;
+        max-width: 70%;
+    }
+    .tenth {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: row-reverse;
+    }
+    .cbse {
+        margin-top: 20px;
+        width: 80%;
+    }
+    .project-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .head-content p {
+        font-size: 2rem;
+    }
+    .head-content h1 {
+        font-size: 3rem;
+    }
+    .head-content h2 {
+        font-size: 2rem;
+    }
+    .about {
+        padding: 30px 10px;
+    }
+    .about p {
+        font-size: 1.2rem;
     }
 }
